@@ -557,28 +557,31 @@
           <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
             <div class="text-sm font-semibold">Access request</div>
             <p class="mt-2 text-sm text-slate-300">
-              This is a static form template. Connect it to your email handler or backend as needed.
+              Fill out the form below and we'll get back to you shortly.
             </p>
 
-            <form class="mt-6 space-y-4" onsubmit="return handleSubmit(event)">
+            <form class="mt-6 space-y-4" action="https://formsubmit.co/goabove1970@gmail.com" method="POST">
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_subject" value="New PRISM DATA Access Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              
               <div>
                 <label class="text-xs text-slate-400" for="name">Name</label>
-                <input id="name" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="Your name" />
+                <input id="name" name="name" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="Your name" />
               </div>
               <div>
                 <label class="text-xs text-slate-400" for="email">Email</label>
-                <input id="email" type="email" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="you@company.com" />
+                <input id="email" name="email" type="email" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="you@company.com" />
               </div>
               <div>
                 <label class="text-xs text-slate-400" for="project">What are you building?</label>
-                <textarea id="project" rows="4" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="A personal finance app that provides spend insights and recurring bill detection..."></textarea>
+                <textarea id="project" name="project" rows="4" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="A personal finance app that provides spend insights and recurring bill detection..."></textarea>
               </div>
 
               <button class="inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200" type="submit">
                 Submit request
               </button>
-
-              <p id="formStatus" class="hidden text-sm"></p>
 
               <p class="text-xs text-slate-400">
                 By submitting, you agree not to send sensitive personal data unless required for evaluation.
@@ -611,19 +614,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      const status = document.getElementById("formStatus");
-      status.classList.remove("hidden");
-      status.classList.remove("text-emerald-300", "text-rose-300");
-
-      // Demo-only behavior: show a friendly message, no network requests
-      const name = document.getElementById("name").value.trim();
-      status.classList.add("text-emerald-300");
-      status.textContent = `Thanks${name ? ", " + name : ""}! Your request is noted. Wire this form to your backend to send emails.`;
-      return false;
-    }
   </script>
 </body>
 </html>
