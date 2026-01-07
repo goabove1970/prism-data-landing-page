@@ -1,229 +1,629 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prism Data - Transform Your Data</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PRISM DATA SYSTEMS LLC — Transaction Intelligence & Data Enrichment</title>
+  <meta name="description" content="PRISM DATA SYSTEMS LLC provides transaction intelligence APIs: enrichment, categorization, merchant normalization, and analytics for fintech and personal finance applications." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Tailwind CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            glow: "0 0 0 1px rgba(148,163,184,.35), 0 8px 30px rgba(2,6,23,.55)"
+          }
         }
+      }
+    }
+  </script>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 150px 2rem 100px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .features {
-            max-width: 1200px;
-            margin: 5rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-
-        .about {
-            background: #f8f9fa;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #667eea;
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        footer {
-            background: #2d3748;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-        }
-    </style>
+  <style>
+    /* Subtle background grid */
+    .bg-grid {
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(148,163,184,.22) 1px, transparent 0);
+      background-size: 28px 28px;
+    }
+    /* Smooth anchor scrolling */
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Prism Data</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero" id="home">
-        <h1>Transform Your Data Into Insights</h1>
-        <p>Powerful data analytics and visualization platform for modern businesses</p>
-        <a href="#contact" class="cta-button">Get Started</a>
-    </section>
+<body class="min-h-screen bg-slate-950 text-slate-100 selection:bg-slate-100 selection:text-slate-900">
+  <!-- Top glow -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-[120px]"></div>
+    <div class="absolute top-40 right-[-120px] h-[420px] w-[420px] rounded-full bg-cyan-400/15 blur-[120px]"></div>
+    <div class="absolute bottom-[-180px] left-[-120px] h-[520px] w-[520px] rounded-full bg-fuchsia-500/10 blur-[140px]"></div>
+  </div>
 
-    <section class="features" id="features">
-        <div class="feature">
-            <div class="feature-icon">📊</div>
-            <h3>Real-Time Analytics</h3>
-            <p>Process and analyze your data in real-time with our advanced analytics engine.</p>
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/70 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <div class="grid h-9 w-9 place-items-center rounded-xl bg-slate-900 ring-1 ring-slate-800 shadow-glow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-cyan-300">
+            <path d="M12 2l2.2 6.6H21l-5.4 3.9 2.1 6.6L12 15.7 6.3 19l2.1-6.6L3 8.6h6.8L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="feature">
-            <div class="feature-icon">🔒</div>
-            <h3>Secure & Reliable</h3>
-            <p>Enterprise-grade security with 99.9% uptime guarantee for your peace of mind.</p>
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-wide">PRISM DATA SYSTEMS LLC</div>
+          <div class="text-xs text-slate-400">Transaction Intelligence APIs</div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">🚀</div>
-            <h3>Lightning Fast</h3>
-            <p>Optimized infrastructure delivers insights at blazing speeds, no matter the scale.</p>
-        </div>
-    </section>
+      </a>
 
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2>About Prism Data</h2>
-            <p>
-                Prism Data is a cutting-edge data analytics platform designed to help businesses 
-                make data-driven decisions. Our mission is to democratize data analytics by making 
-                powerful tools accessible to organizations of all sizes. With intuitive interfaces 
-                and robust capabilities, we're transforming how companies understand and utilize their data.
+      <nav class="hidden items-center gap-6 md:flex text-sm text-slate-300">
+        <a class="hover:text-white" href="#features">Features</a>
+        <a class="hover:text-white" href="#how">How it works</a>
+        <a class="hover:text-white" href="#security">Security</a>
+        <a class="hover:text-white" href="#pricing">Pricing</a>
+        <a class="hover:text-white" href="#faq">FAQ</a>
+        <a class="rounded-xl bg-white/10 px-4 py-2 text-white ring-1 ring-white/15 hover:bg-white/15" href="#contact">Contact</a>
+      </nav>
+
+      <a class="md:hidden rounded-xl bg-white/10 px-3 py-2 text-sm ring-1 ring-white/15 hover:bg-white/15" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs text-slate-300 ring-1 ring-white/10">
+              <span class="h-1.5 w-1.5 rounded-full bg-cyan-300"></span>
+              Enrichment • Categorization • Insights
+            </div>
+
+            <h1 class="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
+              Make messy transactions <span class="text-cyan-300">usable</span>.
+            </h1>
+
+            <p class="mt-5 text-base leading-relaxed text-slate-300 md:text-lg">
+              PRISM DATA SYSTEMS LLC helps fintech and personal finance apps turn raw bank transactions into
+              clean merchants, consistent categories, and actionable analytics — via simple, developer-friendly APIs.
             </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-cyan-300 px-5 py-3 font-semibold text-slate-950 hover:bg-cyan-200">
+                Request access
+              </a>
+              <a href="#pricing" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15">
+                View pricing
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2 w-2 rounded-full bg-emerald-400/90"></span> Low-latency responses
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2 w-2 rounded-full bg-indigo-300/90"></span> Built for scale
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2 w-2 rounded-full bg-fuchsia-300/90"></span> Privacy-first design
+              </div>
+            </div>
+          </div>
+
+          <!-- Code / product card -->
+          <div class="relative">
+            <div class="rounded-2xl bg-slate-900/40 p-1 ring-1 ring-white/10 shadow-glow">
+              <div class="rounded-2xl bg-slate-950 p-6">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-semibold">Enrichment API</div>
+                  <div class="text-xs text-slate-400">POST /v1/enrich</div>
+                </div>
+
+                <pre class="mt-4 overflow-auto rounded-xl bg-slate-900/60 p-4 text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
+  "transactions": [
+    {
+      "id": "tx_001",
+      "description": "SQ *BLUE BOTTLE COFFEE",
+      "amount": -6.45,
+      "currency": "USD",
+      "date": "2026-01-07"
+    }
+  ]
+}</code></pre>
+
+                <div class="mt-4 grid gap-3 md:grid-cols-2">
+                  <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+                    <div class="text-xs text-slate-400">Normalized Merchant</div>
+                    <div class="mt-1 text-sm font-semibold">Blue Bottle Coffee</div>
+                  </div>
+                  <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+                    <div class="text-xs text-slate-400">Category</div>
+                    <div class="mt-1 text-sm font-semibold">Coffee Shops</div>
+                  </div>
+                </div>
+
+                <div class="mt-4 rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+                  <div class="text-xs text-slate-400">Metadata</div>
+                  <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">merchant_confidence: 0.93</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">recurring: true</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">location_hint: NYC</span>
+                  </div>
+                </div>
+
+                <p class="mt-4 text-xs text-slate-400">
+                  Example only. Output varies by data quality and coverage.
+                </p>
+              </div>
+            </div>
+
+            <div class="pointer-events-none absolute -inset-6 -z-10 rounded-[32px] bg-grid opacity-25"></div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer id="contact">
-        <p>&copy; 2026 Prism Data. All rights reserved.</p>
-        <p>Contact: info@prismdata.com</p>
+    <!-- Logos / trust -->
+    <section class="border-y border-slate-800/70 bg-slate-950/40">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <p class="text-sm text-slate-400">
+            Designed for: personal finance apps • lending • underwriting • budgeting • accounting • analytics
+          </p>
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Merchant mapping</span>
+            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">MCC + category</span>
+            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Recurring detection</span>
+            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Cashflow insights</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight">Everything you need to make transactions reliable</h2>
+        <p class="mt-4 text-slate-300">
+          Plug in raw transaction feeds and get consistent, high-signal outputs suitable for dashboards, rules engines,
+          and downstream ML.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-cyan-300/10 ring-1 ring-cyan-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-cyan-200">
+                <path d="M4 7h16M4 12h10M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Merchant normalization</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Turn noisy descriptors into stable merchant entities for cleaner reporting and deduped analytics.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-indigo-300/10 ring-1 ring-indigo-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-indigo-200">
+                <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Categorization</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Assign consistent categories for spend analysis, budgeting, and alerts.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-fuchsia-300/10 ring-1 ring-fuchsia-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-fuchsia-200">
+                <path d="M4 19V5m0 14h16M8 15l2-3 3 2 3-6 2 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Insights & trends</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Cashflow summaries, recurring bills, and anomaly hints to power smarter experiences.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-300/10 ring-1 ring-emerald-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-emerald-200">
+                <path d="M12 2l8 4v6c0 5-3.5 9.7-8 10-4.5-.3-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Risk & quality signals</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Confidence scores and structured metadata so you can make deterministic decisions.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-amber-300/10 ring-1 ring-amber-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-amber-200">
+                <path d="M7 7h10v10H7zM4 4h4M16 4h4M4 16h4M16 20h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Developer friendly</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Clean JSON, consistent schemas, fast onboarding, and predictable versioning.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-slate-300/10 ring-1 ring-slate-300/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-200">
+                <path d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="font-semibold">Low-latency</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-300">
+            Built for real-time UX with batch support for backfills and warehousing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="border-y border-slate-800/70 bg-slate-950/40">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 class="text-3xl font-semibold tracking-tight">How it works</h2>
+            <p class="mt-4 text-slate-300">
+              A simple pipeline that fits modern fintech stacks — without leaking sensitive data.
+            </p>
+
+            <ol class="mt-8 space-y-4">
+              <li class="flex gap-4">
+                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">1</div>
+                <div>
+                  <div class="font-semibold">Send transactions (batch or stream)</div>
+                  <div class="text-sm text-slate-300">Provide descriptors, amounts, dates, and optional context.</div>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">2</div>
+                <div>
+                  <div class="font-semibold">Enrich + normalize</div>
+                  <div class="text-sm text-slate-300">Get stable merchants, categories, and structured metadata.</div>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">3</div>
+                <div>
+                  <div class="font-semibold">Power your product</div>
+                  <div class="text-sm text-slate-300">Use outputs for budgeting, search, insights, underwriting, or alerts.</div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-semibold">Example response</div>
+              <div class="text-xs text-slate-400">200 OK</div>
+            </div>
+            <pre class="mt-4 overflow-auto rounded-xl bg-slate-900/60 p-4 text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
+  "results": [
+    {
+      "id": "tx_001",
+      "merchant": {
+        "name": "Blue Bottle Coffee",
+        "confidence": 0.93
+      },
+      "category": "Coffee Shops",
+      "recurring": true,
+      "tags": ["food_and_drink", "subscription_candidate"]
+    }
+  ],
+  "meta": {
+    "version": "2026-01",
+    "latency_ms_p50": 48
+  }
+}</code></pre>
+            <p class="mt-4 text-xs text-slate-400">
+              Schemas are versioned; you control upgrades. Latency shown is illustrative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section id="security" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight">Security & privacy by design</h2>
+          <p class="mt-4 text-slate-300">
+            We build for minimal data exposure and clear controls. You decide what to send; we focus on deriving signal.
+          </p>
+
+          <ul class="mt-8 space-y-3 text-sm text-slate-300">
+            <li class="flex gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
+              Transport security (TLS) and API-key based access controls.
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
+              Least-privilege data model: enrichment can work on descriptors + amount + date.
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
+              Optional redaction fields to avoid sending user-identifying metadata.
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
+              Clear retention policy alignment for production use (available on request).
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <h3 class="text-lg font-semibold">Built for regulated environments</h3>
+          <p class="mt-3 text-sm text-slate-300">
+            If you’re building in fintech, you need predictable controls. We can support:
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+              <div class="text-sm font-semibold">Audit-ready logs</div>
+              <div class="mt-1 text-xs text-slate-400">Request IDs + traceability</div>
+            </div>
+            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+              <div class="text-sm font-semibold">Access segmentation</div>
+              <div class="mt-1 text-xs text-slate-400">Keys per env / customer</div>
+            </div>
+            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+              <div class="text-sm font-semibold">Data minimization</div>
+              <div class="mt-1 text-xs text-slate-400">Send only what’s needed</div>
+            </div>
+            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
+              <div class="text-sm font-semibold">Versioned outputs</div>
+              <div class="mt-1 text-xs text-slate-400">Stable downstream systems</div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-xs text-slate-400">
+            Note: This page is informational and not a contractual security statement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="border-y border-slate-800/70 bg-slate-950/40">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-semibold tracking-tight">Pricing that scales with your usage</h2>
+            <p class="mt-4 text-slate-300">
+              Start with a sandbox. Move to production when you’re ready. Custom plans available for high-volume use.
+            </p>
+          </div>
+
+          <div class="text-xs text-slate-400">
+            Prices shown are example placeholders — tailor to your actual offering.
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="text-sm font-semibold">Sandbox</div>
+            <div class="mt-2 text-3xl font-semibold">$0<span class="text-sm font-normal text-slate-400">/mo</span></div>
+            <p class="mt-3 text-sm text-slate-300">For development and evaluation.</p>
+            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+              <li>• Rate-limited API keys</li>
+              <li>• Test data only</li>
+              <li>• Email support</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15">
+              Get sandbox key
+            </a>
+          </div>
+
+          <div class="rounded-2xl bg-cyan-300/10 p-6 ring-1 ring-cyan-300/25 shadow-glow">
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-semibold">Production</div>
+              <span class="rounded-full bg-cyan-300/20 px-3 py-1 text-xs text-cyan-100 ring-1 ring-cyan-300/20">Most popular</span>
+            </div>
+            <div class="mt-2 text-3xl font-semibold">$499<span class="text-sm font-normal text-slate-300">/mo</span></div>
+            <p class="mt-3 text-sm text-slate-200">For shipped products and real users.</p>
+            <ul class="mt-6 space-y-2 text-sm text-slate-200">
+              <li>• Higher throughput</li>
+              <li>• Versioned schemas</li>
+              <li>• SLA options</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200">
+              Talk to us
+            </a>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="text-sm font-semibold">Enterprise</div>
+            <div class="mt-2 text-3xl font-semibold">Custom</div>
+            <p class="mt-3 text-sm text-slate-300">For high volume & special requirements.</p>
+            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+              <li>• Dedicated support</li>
+              <li>• Custom models/rules</li>
+              <li>• Security reviews</li>
+            </ul>
+            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15">
+              Contact sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight">FAQ</h2>
+        <p class="mt-4 text-slate-300">Common questions from builders.</p>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-sm font-semibold">
+            What do you need to enrich a transaction?
+            <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Typically: description, amount, currency, and date. Optional context (MCC, account type, channel) can improve
+            confidence, but isn’t strictly required.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-sm font-semibold">
+            Do you store end-user PII?
+            <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            This landing page reflects a privacy-first approach: send only what’s necessary. For production,
+            define retention and handling in your terms and security documentation.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-sm font-semibold">
+            Can I use this for a personal finance app (not B2B)?
+            <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Yes — the same enrichment primitives power budgeting, spend insights, and alerts for consumer apps.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-sm font-semibold">
+            Do you support batch processing?
+            <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Yes. Use batch endpoints for backfills or warehousing, and lower-latency endpoints for interactive UX.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-slate-800/70 bg-slate-950/40">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div class="grid gap-8 md:grid-cols-2 md:items-start">
+          <div>
+            <h2 class="text-3xl font-semibold tracking-tight">Get in touch</h2>
+            <p class="mt-4 text-slate-300">
+              Tell us what you’re building and what volume you expect. We’ll respond with next steps and access options.
+            </p>
+
+            <div class="mt-8 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+              <div class="text-sm font-semibold">Company</div>
+              <dl class="mt-4 space-y-3 text-sm text-slate-300">
+                <div class="flex justify-between gap-6">
+                  <dt class="text-slate-400">Legal name</dt>
+                  <dd class="text-right">PRISM DATA SYSTEMS LLC</dd>
+                </div>
+                <div class="flex justify-between gap-6">
+                  <dt class="text-slate-400">Business address</dt>
+                  <dd class="text-right">4121 24TH STREET 6F<br/>LONG ISLAND CITY, NY 11101</dd>
+                </div>
+                <div class="flex justify-between gap-6">
+                  <dt class="text-slate-400">Member</dt>
+                  <dd class="text-right">James Miller</dd>
+                </div>
+              </dl>
+              <p class="mt-5 text-xs text-slate-400">
+                Replace / add your support email, domain, and documentation links before publishing.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="text-sm font-semibold">Access request</div>
+            <p class="mt-2 text-sm text-slate-300">
+              This is a static form template. Connect it to your email handler or backend as needed.
+            </p>
+
+            <form class="mt-6 space-y-4" onsubmit="return handleSubmit(event)">
+              <div>
+                <label class="text-xs text-slate-400" for="name">Name</label>
+                <input id="name" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="Your name" />
+              </div>
+              <div>
+                <label class="text-xs text-slate-400" for="email">Email</label>
+                <input id="email" type="email" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="you@company.com" />
+              </div>
+              <div>
+                <label class="text-xs text-slate-400" for="project">What are you building?</label>
+                <textarea id="project" rows="4" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="A personal finance app that provides spend insights and recurring bill detection..."></textarea>
+              </div>
+
+              <button class="inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200" type="submit">
+                Submit request
+              </button>
+
+              <p id="formStatus" class="hidden text-sm"></p>
+
+              <p class="text-xs text-slate-400">
+                By submitting, you agree not to send sensitive personal data unless required for evaluation.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="text-sm text-slate-300">
+            © <span id="year"></span> PRISM DATA SYSTEMS LLC. All rights reserved.
+          </div>
+          <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+            <a class="hover:text-slate-200" href="#security">Security</a>
+            <a class="hover:text-slate-200" href="#pricing">Pricing</a>
+            <a class="hover:text-slate-200" href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="mt-6 text-xs text-slate-500">
+          Disclaimer: This site is a template and does not constitute legal, financial, or security advice.
+        </div>
+      </div>
     </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById("formStatus");
+      status.classList.remove("hidden");
+      status.classList.remove("text-emerald-300", "text-rose-300");
+
+      // Demo-only behavior: show a friendly message, no network requests
+      const name = document.getElementById("name").value.trim();
+      status.classList.add("text-emerald-300");
+      status.textContent = `Thanks${name ? ", " + name : ""}! Your request is noted. Wire this form to your backend to send emails.`;
+      return false;
+    }
+  </script>
 </body>
 </html>

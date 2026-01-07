@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Landing Page</title>
+    <meta name="description" content="A simple landing page." />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        margin: 0;
+        background: #fafafa;
+      }
+      .wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px;
+      }
+      .card {
+        max-width: 720px;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        padding: 28px;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 34px;
+      }
+      p {
+        margin: 0 0 18px;
+        line-height: 1.5;
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid #111;
+        text-decoration: none;
+        color: #111;
+      }
+      .muted {
+        color: #666;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Hello 👋</h1>
+        <p>This is my simple landing page.</p>
+        <a class="cta" href="mailto:you@example.com">Contact me</a>
+        <p class="muted">© <span id="y"></span> Your Name</p>
+      </div>
+    </div>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
