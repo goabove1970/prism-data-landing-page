@@ -114,13 +114,13 @@
           <!-- Code / product card -->
           <div class="relative">
             <div class="rounded-2xl bg-slate-900/40 p-1 ring-1 ring-white/10 shadow-glow">
-              <div class="rounded-2xl bg-slate-950 p-6">
-                <div class="flex items-center justify-between">
-                  <div class="text-sm font-semibold">Enrichment API</div>
-                  <div class="text-xs text-slate-400">POST /v1/enrich</div>
+              <div class="rounded-2xl bg-slate-950 p-4 md:p-6">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="text-xs md:text-sm font-semibold">Enrichment API</div>
+                  <div class="text-[10px] md:text-xs text-slate-400 shrink-0">POST /v1/enrich</div>
                 </div>
 
-                <pre class="mt-4 overflow-auto rounded-xl bg-slate-900/60 p-4 text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
+                <pre class="mt-3 md:mt-4 overflow-x-auto rounded-xl bg-slate-900/60 p-3 md:p-4 text-[10px] md:text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
   "transactions": [
     {
       "id": "tx_001",
@@ -132,27 +132,27 @@
   ]
 }</code></pre>
 
-                <div class="mt-4 grid gap-3 md:grid-cols-2">
-                  <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-                    <div class="text-xs text-slate-400">Normalized Merchant</div>
-                    <div class="mt-1 text-sm font-semibold">Blue Bottle Coffee</div>
+                <div class="mt-3 md:mt-4 grid gap-2 md:gap-3 md:grid-cols-2">
+                  <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+                    <div class="text-[10px] md:text-xs text-slate-400">Normalized Merchant</div>
+                    <div class="mt-1 text-xs md:text-sm font-semibold">Blue Bottle Coffee</div>
                   </div>
-                  <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-                    <div class="text-xs text-slate-400">Category</div>
-                    <div class="mt-1 text-sm font-semibold">Coffee Shops</div>
-                  </div>
-                </div>
-
-                <div class="mt-4 rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-                  <div class="text-xs text-slate-400">Metadata</div>
-                  <div class="mt-2 flex flex-wrap gap-2 text-xs">
-                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">merchant_confidence: 0.93</span>
-                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">recurring: true</span>
-                    <span class="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">location_hint: NYC</span>
+                  <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+                    <div class="text-[10px] md:text-xs text-slate-400">Category</div>
+                    <div class="mt-1 text-xs md:text-sm font-semibold">Coffee Shops</div>
                   </div>
                 </div>
 
-                <p class="mt-4 text-xs text-slate-400">
+                <div class="mt-3 md:mt-4 rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+                  <div class="text-[10px] md:text-xs text-slate-400">Metadata</div>
+                  <div class="mt-2 flex flex-wrap gap-1.5 md:gap-2 text-[10px] md:text-xs">
+                    <span class="rounded-full bg-white/10 px-2 md:px-3 py-1 ring-1 ring-white/10">merchant_confidence: 0.93</span>
+                    <span class="rounded-full bg-white/10 px-2 md:px-3 py-1 ring-1 ring-white/10">recurring: true</span>
+                    <span class="rounded-full bg-white/10 px-2 md:px-3 py-1 ring-1 ring-white/10">location_hint: NYC</span>
+                  </div>
+                </div>
+
+                <p class="mt-3 md:mt-4 text-[10px] md:text-xs text-slate-400">
                   Example only. Output varies by data quality and coverage.
                 </p>
               </div>
@@ -166,112 +166,112 @@
 
     <!-- Logos / trust -->
     <section class="border-y border-slate-800/70 bg-slate-950/40">
-      <div class="mx-auto max-w-6xl px-4 py-10">
-        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p class="text-sm text-slate-400">
+      <div class="mx-auto max-w-6xl px-5 py-8 md:px-4 md:py-10">
+        <div class="flex flex-col items-start justify-between gap-4 md:gap-6 md:flex-row md:items-center">
+          <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
             Designed for: personal finance apps • lending • underwriting • budgeting • accounting • analytics
           </p>
-          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
-            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Merchant mapping</span>
-            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">MCC + category</span>
-            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Recurring detection</span>
-            <span class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Cashflow insights</span>
+          <div class="flex flex-wrap items-center gap-2 md:gap-3 text-[10px] md:text-xs text-slate-400">
+            <span class="rounded-full bg-white/5 px-2.5 md:px-3 py-1 ring-1 ring-white/10 whitespace-nowrap">Merchant mapping</span>
+            <span class="rounded-full bg-white/5 px-2.5 md:px-3 py-1 ring-1 ring-white/10 whitespace-nowrap">MCC + category</span>
+            <span class="rounded-full bg-white/5 px-2.5 md:px-3 py-1 ring-1 ring-white/10 whitespace-nowrap">Recurring detection</span>
+            <span class="rounded-full bg-white/5 px-2.5 md:px-3 py-1 ring-1 ring-white/10 whitespace-nowrap">Cashflow insights</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+    <section id="features" class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
       <div class="max-w-2xl">
-        <h2 class="text-3xl font-semibold tracking-tight">Everything you need to make transactions reliable</h2>
-        <p class="mt-4 text-slate-300">
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">Everything you need to make transactions reliable</h2>
+        <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">
           Plug in raw transaction feeds and get consistent, high-signal outputs suitable for dashboards, rules engines,
           and downstream ML.
         </p>
       </div>
 
-      <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-cyan-300/10 ring-1 ring-cyan-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-cyan-200">
+      <div class="mt-8 md:mt-10 grid gap-3 md:gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-cyan-300/10 ring-1 ring-cyan-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-cyan-200 md:w-[18px] md:h-[18px]">
                 <path d="M4 7h16M4 12h10M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Merchant normalization</div>
+            <div class="text-sm md:text-base font-semibold">Merchant normalization</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Turn noisy descriptors into stable merchant entities for cleaner reporting and deduped analytics.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-indigo-300/10 ring-1 ring-indigo-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-indigo-200">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-indigo-300/10 ring-1 ring-indigo-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-indigo-200 md:w-[18px] md:h-[18px]">
                 <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Categorization</div>
+            <div class="text-sm md:text-base font-semibold">Categorization</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Assign consistent categories for spend analysis, budgeting, and alerts.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-fuchsia-300/10 ring-1 ring-fuchsia-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-fuchsia-200">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-fuchsia-300/10 ring-1 ring-fuchsia-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-fuchsia-200 md:w-[18px] md:h-[18px]">
                 <path d="M4 19V5m0 14h16M8 15l2-3 3 2 3-6 2 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Insights & trends</div>
+            <div class="text-sm md:text-base font-semibold">Insights & trends</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Cashflow summaries, recurring bills, and anomaly hints to power smarter experiences.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-300/10 ring-1 ring-emerald-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-emerald-200">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-emerald-300/10 ring-1 ring-emerald-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-emerald-200 md:w-[18px] md:h-[18px]">
                 <path d="M12 2l8 4v6c0 5-3.5 9.7-8 10-4.5-.3-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Risk & quality signals</div>
+            <div class="text-sm md:text-base font-semibold">Risk & quality signals</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Confidence scores and structured metadata so you can make deterministic decisions.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-amber-300/10 ring-1 ring-amber-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-amber-200">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-amber-300/10 ring-1 ring-amber-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-amber-200 md:w-[18px] md:h-[18px]">
                 <path d="M7 7h10v10H7zM4 4h4M16 4h4M4 16h4M16 20h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Developer friendly</div>
+            <div class="text-sm md:text-base font-semibold">Developer friendly</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Clean JSON, consistent schemas, fast onboarding, and predictable versioning.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <div class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-slate-300/10 ring-1 ring-slate-300/20">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-200">
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <div class="flex items-center gap-2.5 md:gap-3">
+            <div class="grid h-9 w-9 md:h-10 md:w-10 shrink-0 place-items-center rounded-xl bg-slate-300/10 ring-1 ring-slate-300/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-slate-200 md:w-[18px] md:h-[18px]">
                 <path d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="font-semibold">Low-latency</div>
+            <div class="text-sm md:text-base font-semibold">Low-latency</div>
           </div>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Built for real-time UX with batch support for backfills and warehousing.
           </p>
         </div>
@@ -280,45 +280,45 @@
 
     <!-- How it works -->
     <section id="how" class="border-y border-slate-800/70 bg-slate-950/40">
-      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+      <div class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
+        <div class="grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <h2 class="text-3xl font-semibold tracking-tight">How it works</h2>
-            <p class="mt-4 text-slate-300">
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">How it works</h2>
+            <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">
               A simple pipeline that fits modern fintech stacks — without leaking sensitive data.
             </p>
 
-            <ol class="mt-8 space-y-4">
-              <li class="flex gap-4">
-                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">1</div>
+            <ol class="mt-6 md:mt-8 space-y-3 md:space-y-4">
+              <li class="flex gap-3 md:gap-4">
+                <div class="mt-0.5 md:mt-1 grid h-7 w-7 md:h-8 md:w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-xs md:text-sm font-semibold text-cyan-200">1</div>
                 <div>
-                  <div class="font-semibold">Send transactions (batch or stream)</div>
-                  <div class="text-sm text-slate-300">Provide descriptors, amounts, dates, and optional context.</div>
+                  <div class="text-sm md:text-base font-semibold">Send transactions (batch or stream)</div>
+                  <div class="text-xs md:text-sm text-slate-300 leading-relaxed">Provide descriptors, amounts, dates, and optional context.</div>
                 </div>
               </li>
-              <li class="flex gap-4">
-                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">2</div>
+              <li class="flex gap-3 md:gap-4">
+                <div class="mt-0.5 md:mt-1 grid h-7 w-7 md:h-8 md:w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-xs md:text-sm font-semibold text-cyan-200">2</div>
                 <div>
-                  <div class="font-semibold">Enrich + normalize</div>
-                  <div class="text-sm text-slate-300">Get stable merchants, categories, and structured metadata.</div>
+                  <div class="text-sm md:text-base font-semibold">Enrich + normalize</div>
+                  <div class="text-xs md:text-sm text-slate-300 leading-relaxed">Get stable merchants, categories, and structured metadata.</div>
                 </div>
               </li>
-              <li class="flex gap-4">
-                <div class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-cyan-200">3</div>
+              <li class="flex gap-3 md:gap-4">
+                <div class="mt-0.5 md:mt-1 grid h-7 w-7 md:h-8 md:w-8 shrink-0 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 text-xs md:text-sm font-semibold text-cyan-200">3</div>
                 <div>
-                  <div class="font-semibold">Power your product</div>
-                  <div class="text-sm text-slate-300">Use outputs for budgeting, search, insights, underwriting, or alerts.</div>
+                  <div class="text-sm md:text-base font-semibold">Power your product</div>
+                  <div class="text-xs md:text-sm text-slate-300 leading-relaxed">Use outputs for budgeting, search, insights, underwriting, or alerts.</div>
                 </div>
               </li>
             </ol>
           </div>
 
-          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <div class="flex items-center justify-between">
-              <div class="text-sm font-semibold">Example response</div>
-              <div class="text-xs text-slate-400">200 OK</div>
+          <div class="rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+            <div class="flex items-center justify-between gap-2">
+              <div class="text-xs md:text-sm font-semibold">Example response</div>
+              <div class="text-[10px] md:text-xs text-slate-400 shrink-0">200 OK</div>
             </div>
-            <pre class="mt-4 overflow-auto rounded-xl bg-slate-900/60 p-4 text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
+            <pre class="mt-3 md:mt-4 overflow-x-auto rounded-xl bg-slate-900/60 p-3 md:p-4 text-[10px] md:text-xs leading-relaxed text-slate-200 ring-1 ring-white/10"><code>{
   "results": [
     {
       "id": "tx_001",
@@ -336,7 +336,7 @@
     "latency_ms_p50": 48
   }
 }</code></pre>
-            <p class="mt-4 text-xs text-slate-400">
+            <p class="mt-3 md:mt-4 text-[10px] md:text-xs text-slate-400 leading-relaxed">
               Schemas are versioned; you control upgrades. Latency shown is illustrative.
             </p>
           </div>
@@ -345,60 +345,60 @@
     </section>
 
     <!-- Security -->
-    <section id="security" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+    <section id="security" class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
+      <div class="grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
         <div>
-          <h2 class="text-3xl font-semibold tracking-tight">Security & privacy by design</h2>
-          <p class="mt-4 text-slate-300">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">Security & privacy by design</h2>
+          <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">
             We build for minimal data exposure and clear controls. You decide what to send; we focus on deriving signal.
           </p>
 
-          <ul class="mt-8 space-y-3 text-sm text-slate-300">
-            <li class="flex gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
-              Transport security (TLS) and API-key based access controls.
+          <ul class="mt-6 md:mt-8 space-y-2.5 md:space-y-3 text-xs md:text-sm text-slate-300">
+            <li class="flex gap-2.5 md:gap-3">
+              <span class="mt-1 inline-block h-1.5 w-1.5 md:h-2 md:w-2 shrink-0 rounded-full bg-cyan-300"></span>
+              <span class="leading-relaxed">Transport security (TLS) and API-key based access controls.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
-              Least-privilege data model: enrichment can work on descriptors + amount + date.
+            <li class="flex gap-2.5 md:gap-3">
+              <span class="mt-1 inline-block h-1.5 w-1.5 md:h-2 md:w-2 shrink-0 rounded-full bg-cyan-300"></span>
+              <span class="leading-relaxed">Least-privilege data model: enrichment can work on descriptors + amount + date.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
-              Optional redaction fields to avoid sending user-identifying metadata.
+            <li class="flex gap-2.5 md:gap-3">
+              <span class="mt-1 inline-block h-1.5 w-1.5 md:h-2 md:w-2 shrink-0 rounded-full bg-cyan-300"></span>
+              <span class="leading-relaxed">Optional redaction fields to avoid sending user-identifying metadata.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
-              Clear retention policy alignment for production use (available on request).
+            <li class="flex gap-2.5 md:gap-3">
+              <span class="mt-1 inline-block h-1.5 w-1.5 md:h-2 md:w-2 shrink-0 rounded-full bg-cyan-300"></span>
+              <span class="leading-relaxed">Clear retention policy alignment for production use (available on request).</span>
             </li>
           </ul>
         </div>
 
-        <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <h3 class="text-lg font-semibold">Built for regulated environments</h3>
-          <p class="mt-3 text-sm text-slate-300">
-            If you’re building in fintech, you need predictable controls. We can support:
+        <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+          <h3 class="text-base md:text-lg font-semibold">Built for regulated environments</h3>
+          <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
+            If you're building in fintech, you need predictable controls. We can support:
           </p>
 
-          <div class="mt-6 grid gap-3 sm:grid-cols-2">
-            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-              <div class="text-sm font-semibold">Audit-ready logs</div>
-              <div class="mt-1 text-xs text-slate-400">Request IDs + traceability</div>
+          <div class="mt-5 md:mt-6 grid gap-2.5 md:gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+              <div class="text-xs md:text-sm font-semibold">Audit-ready logs</div>
+              <div class="mt-1 text-[10px] md:text-xs text-slate-400">Request IDs + traceability</div>
             </div>
-            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-              <div class="text-sm font-semibold">Access segmentation</div>
-              <div class="mt-1 text-xs text-slate-400">Keys per env / customer</div>
+            <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+              <div class="text-xs md:text-sm font-semibold">Access segmentation</div>
+              <div class="mt-1 text-[10px] md:text-xs text-slate-400">Keys per env / customer</div>
             </div>
-            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-              <div class="text-sm font-semibold">Data minimization</div>
-              <div class="mt-1 text-xs text-slate-400">Send only what’s needed</div>
+            <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+              <div class="text-xs md:text-sm font-semibold">Data minimization</div>
+              <div class="mt-1 text-[10px] md:text-xs text-slate-400">Send only what's needed</div>
             </div>
-            <div class="rounded-xl bg-slate-900/50 p-4 ring-1 ring-white/10">
-              <div class="text-sm font-semibold">Versioned outputs</div>
-              <div class="mt-1 text-xs text-slate-400">Stable downstream systems</div>
+            <div class="rounded-xl bg-slate-900/50 p-3 md:p-4 ring-1 ring-white/10">
+              <div class="text-xs md:text-sm font-semibold">Versioned outputs</div>
+              <div class="mt-1 text-[10px] md:text-xs text-slate-400">Stable downstream systems</div>
             </div>
           </div>
 
-          <p class="mt-6 text-xs text-slate-400">
+          <p class="mt-5 md:mt-6 text-[10px] md:text-xs text-slate-400 leading-relaxed">
             Note: This page is informational and not a contractual security statement.
           </p>
         </div>
@@ -407,62 +407,62 @@
 
     <!-- Pricing -->
     <section id="pricing" class="border-y border-slate-800/70 bg-slate-950/40">
-      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
+        <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:items-end md:justify-between">
           <div class="max-w-2xl">
-            <h2 class="text-3xl font-semibold tracking-tight">Pricing that scales with your usage</h2>
-            <p class="mt-4 text-slate-300">
-              Start with a sandbox. Move to production when you’re ready. Custom plans available for high-volume use.
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">Pricing that scales with your usage</h2>
+            <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">
+              Start with a sandbox. Move to production when you're ready. Custom plans available for high-volume use.
             </p>
           </div>
 
-          <div class="text-xs text-slate-400">
+          <div class="text-[10px] md:text-xs text-slate-400">
             Prices shown are example placeholders — tailor to your actual offering.
           </div>
         </div>
 
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
-          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <div class="text-sm font-semibold">Sandbox</div>
-            <div class="mt-2 text-3xl font-semibold">$0<span class="text-sm font-normal text-slate-400">/mo</span></div>
-            <p class="mt-3 text-sm text-slate-300">For development and evaluation.</p>
-            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+        <div class="mt-8 md:mt-10 grid gap-3 md:gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+            <div class="text-xs md:text-sm font-semibold">Sandbox</div>
+            <div class="mt-2 text-2xl md:text-3xl font-semibold">$0<span class="text-xs md:text-sm font-normal text-slate-400">/mo</span></div>
+            <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">For development and evaluation.</p>
+            <ul class="mt-5 md:mt-6 space-y-1.5 md:space-y-2 text-xs md:text-sm text-slate-300">
               <li>• Rate-limited API keys</li>
               <li>• Test data only</li>
               <li>• Email support</li>
             </ul>
-            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15">
+            <a href="#contact" class="mt-6 md:mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold ring-1 ring-white/15 hover:bg-white/15">
               Get sandbox key
             </a>
           </div>
 
-          <div class="rounded-2xl bg-cyan-300/10 p-6 ring-1 ring-cyan-300/25 shadow-glow">
-            <div class="flex items-center justify-between">
-              <div class="text-sm font-semibold">Production</div>
-              <span class="rounded-full bg-cyan-300/20 px-3 py-1 text-xs text-cyan-100 ring-1 ring-cyan-300/20">Most popular</span>
+          <div class="rounded-2xl bg-cyan-300/10 p-5 md:p-6 ring-1 ring-cyan-300/25 shadow-glow">
+            <div class="flex items-center justify-between gap-2">
+              <div class="text-xs md:text-sm font-semibold">Production</div>
+              <span class="rounded-full bg-cyan-300/20 px-2 md:px-3 py-1 text-[10px] md:text-xs text-cyan-100 ring-1 ring-cyan-300/20 shrink-0">Most popular</span>
             </div>
-            <div class="mt-2 text-3xl font-semibold">$499<span class="text-sm font-normal text-slate-300">/mo</span></div>
-            <p class="mt-3 text-sm text-slate-200">For shipped products and real users.</p>
-            <ul class="mt-6 space-y-2 text-sm text-slate-200">
+            <div class="mt-2 text-2xl md:text-3xl font-semibold">$499<span class="text-xs md:text-sm font-normal text-slate-300">/mo</span></div>
+            <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-200 leading-relaxed">For shipped products and real users.</p>
+            <ul class="mt-5 md:mt-6 space-y-1.5 md:space-y-2 text-xs md:text-sm text-slate-200">
               <li>• Higher throughput</li>
               <li>• Versioned schemas</li>
               <li>• SLA options</li>
             </ul>
-            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200">
+            <a href="#contact" class="mt-6 md:mt-8 inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold text-slate-950 hover:bg-cyan-200">
               Talk to us
             </a>
           </div>
 
-          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <div class="text-sm font-semibold">Enterprise</div>
-            <div class="mt-2 text-3xl font-semibold">Custom</div>
-            <p class="mt-3 text-sm text-slate-300">For high volume & special requirements.</p>
-            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+          <div class="rounded-2xl bg-white/5 p-5 md:p-6 ring-1 ring-white/10">
+            <div class="text-xs md:text-sm font-semibold">Enterprise</div>
+            <div class="mt-2 text-2xl md:text-3xl font-semibold">Custom</div>
+            <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">For high volume & special requirements.</p>
+            <ul class="mt-5 md:mt-6 space-y-1.5 md:space-y-2 text-xs md:text-sm text-slate-300">
               <li>• Dedicated support</li>
               <li>• Custom models/rules</li>
               <li>• Security reviews</li>
             </ul>
-            <a href="#contact" class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15">
+            <a href="#contact" class="mt-6 md:mt-8 inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold ring-1 ring-white/15 hover:bg-white/15">
               Contact sales
             </a>
           </div>
@@ -471,51 +471,51 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+    <section id="faq" class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
       <div class="max-w-2xl">
-        <h2 class="text-3xl font-semibold tracking-tight">FAQ</h2>
-        <p class="mt-4 text-slate-300">Common questions from builders.</p>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">FAQ</h2>
+        <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">Common questions from builders.</p>
       </div>
 
-      <div class="mt-10 grid gap-4 md:grid-cols-2">
-        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <summary class="cursor-pointer list-none text-sm font-semibold">
+      <div class="mt-8 md:mt-10 grid gap-3 md:gap-4 md:grid-cols-2">
+        <details class="group rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-xs md:text-sm font-semibold">
             What do you need to enrich a transaction?
             <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
           </summary>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Typically: description, amount, currency, and date. Optional context (MCC, account type, channel) can improve
-            confidence, but isn’t strictly required.
+            confidence, but isn't strictly required.
           </p>
         </details>
 
-        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <summary class="cursor-pointer list-none text-sm font-semibold">
+        <details class="group rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-xs md:text-sm font-semibold">
             Do you store end-user PII?
             <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
           </summary>
-          <p class="mt-3 text-sm text-slate-300">
-            This landing page reflects a privacy-first approach: send only what’s necessary. For production,
+          <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
+            This landing page reflects a privacy-first approach: send only what's necessary. For production,
             define retention and handling in your terms and security documentation.
           </p>
         </details>
 
-        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <summary class="cursor-pointer list-none text-sm font-semibold">
+        <details class="group rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-xs md:text-sm font-semibold">
             Can I use this for a personal finance app (not B2B)?
             <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
           </summary>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Yes — the same enrichment primitives power budgeting, spend insights, and alerts for consumer apps.
           </p>
         </details>
 
-        <details class="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-          <summary class="cursor-pointer list-none text-sm font-semibold">
+        <details class="group rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+          <summary class="cursor-pointer list-none text-xs md:text-sm font-semibold">
             Do you support batch processing?
             <span class="float-right text-slate-400 group-open:rotate-180 transition">▾</span>
           </summary>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="mt-2 md:mt-3 text-xs md:text-sm text-slate-300 leading-relaxed">
             Yes. Use batch endpoints for backfills or warehousing, and lower-latency endpoints for interactive UX.
           </p>
         </details>
@@ -524,73 +524,73 @@
 
     <!-- Contact -->
     <section id="contact" class="border-t border-slate-800/70 bg-slate-950/40">
-      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div class="grid gap-8 md:grid-cols-2 md:items-start">
+      <div class="mx-auto max-w-6xl px-5 py-12 md:px-4 md:py-16 lg:py-24">
+        <div class="grid gap-6 md:gap-8 md:grid-cols-2 md:items-start">
           <div>
-            <h2 class="text-3xl font-semibold tracking-tight">Get in touch</h2>
-            <p class="mt-4 text-slate-300">
-              Tell us what you’re building and what volume you expect. We’ll respond with next steps and access options.
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">Get in touch</h2>
+            <p class="mt-3 md:mt-4 text-sm md:text-base text-slate-300">
+              Tell us what you're building and what volume you expect. We'll respond with next steps and access options.
             </p>
 
-            <div class="mt-8 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div class="text-sm font-semibold">Company</div>
-              <dl class="mt-4 space-y-3 text-sm text-slate-300">
-                <div class="flex justify-between gap-6">
-                  <dt class="text-slate-400">Legal name</dt>
+            <div class="mt-6 md:mt-8 rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+              <div class="text-xs md:text-sm font-semibold">Company</div>
+              <dl class="mt-3 md:mt-4 space-y-2.5 md:space-y-3 text-xs md:text-sm text-slate-300">
+                <div class="flex justify-between gap-4 md:gap-6">
+                  <dt class="text-slate-400 shrink-0">Legal name</dt>
                   <dd class="text-right">PRISM DATA SYSTEMS LLC</dd>
                 </div>
-                <div class="flex justify-between gap-6">
-                  <dt class="text-slate-400">Business address</dt>
-                  <dd class="text-right">4121 24TH STREET 6F<br/>LONG ISLAND CITY, NY 11101</dd>
+                <div class="flex justify-between gap-4 md:gap-6">
+                  <dt class="text-slate-400 shrink-0">Business address</dt>
+                  <dd class="text-right text-[11px] md:text-xs lg:text-sm leading-relaxed">4121 24TH STREET 6F<br/>LONG ISLAND CITY, NY 11101</dd>
                 </div>
-                <div class="flex justify-between gap-6">
-                  <dt class="text-slate-400">Owner</dt>
+                <div class="flex justify-between gap-4 md:gap-6">
+                  <dt class="text-slate-400 shrink-0">Owner</dt>
                   <dd class="text-right">James Miller</dd>
                 </div>
-                <div class="flex justify-between gap-6">
-                  <dt class="text-slate-400">Support</dt>
-                  <dd class="text-right"><a href="mailto:info@tryprismdata.com" class="hover:text-cyan-300">info@tryprismdata.com</a></dd>
+                <div class="flex justify-between gap-4 md:gap-6">
+                  <dt class="text-slate-400 shrink-0">Support</dt>
+                  <dd class="text-right break-all"><a href="mailto:info@tryprismdata.com" class="hover:text-cyan-300">info@tryprismdata.com</a></dd>
                 </div>
-                <div class="flex justify-between gap-6">
-                  <dt class="text-slate-400">Website</dt>
+                <div class="flex justify-between gap-4 md:gap-6">
+                  <dt class="text-slate-400 shrink-0">Website</dt>
                   <dd class="text-right"><a href="https://tryprismdata.com" class="hover:text-cyan-300">tryprismdata.com</a></dd>
                 </div>
               </dl>
             </div>
           </div>
 
-          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <div class="text-sm font-semibold">Access request</div>
-            <p class="mt-2 text-sm text-slate-300">
+          <div class="rounded-2xl bg-white/5 p-4 md:p-6 ring-1 ring-white/10">
+            <div class="text-xs md:text-sm font-semibold">Access request</div>
+            <p class="mt-2 text-xs md:text-sm text-slate-300 leading-relaxed">
               Fill out the form below and we'll get back to you shortly.
             </p>
 
-            <form id="contactForm" class="mt-6 space-y-4" action="https://formsubmit.co/info@tryprismdata.com" method="POST">
+            <form id="contactForm" class="mt-5 md:mt-6 space-y-3 md:space-y-4" action="https://formsubmit.co/info@tryprismdata.com" method="POST">
               <!-- FormSubmit Configuration -->
               <input type="hidden" name="_subject" value="New PRISM DATA Access Request">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               
               <div>
-                <label class="text-xs text-slate-400" for="name">Name</label>
-                <input id="name" name="name" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="Your name" />
+                <label class="text-[10px] md:text-xs text-slate-400" for="name">Name</label>
+                <input id="name" name="name" required class="mt-1.5 md:mt-2 w-full rounded-xl bg-slate-950 px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="Your name" />
               </div>
               <div>
-                <label class="text-xs text-slate-400" for="email">Email</label>
-                <input id="email" name="email" type="email" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="you@company.com" />
+                <label class="text-[10px] md:text-xs text-slate-400" for="email">Email</label>
+                <input id="email" name="email" type="email" required class="mt-1.5 md:mt-2 w-full rounded-xl bg-slate-950 px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="you@company.com" />
               </div>
               <div>
-                <label class="text-xs text-slate-400" for="project">What are you building?</label>
-                <textarea id="project" name="project" rows="4" required class="mt-2 w-full rounded-xl bg-slate-950 px-4 py-3 text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="A personal finance app that provides spend insights and recurring bill detection..."></textarea>
+                <label class="text-[10px] md:text-xs text-slate-400" for="project">What are you building?</label>
+                <textarea id="project" name="project" rows="4" required class="mt-1.5 md:mt-2 w-full rounded-xl bg-slate-950 px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-sm ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300/60" placeholder="A personal finance app that provides spend insights and recurring bill detection..."></textarea>
               </div>
 
-              <button id="submitBtn" class="inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-3 font-semibold text-slate-950 hover:bg-cyan-200" type="submit">
+              <button id="submitBtn" class="inline-flex w-full items-center justify-center rounded-xl bg-cyan-300 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold text-slate-950 hover:bg-cyan-200" type="submit">
                 Submit request
               </button>
 
-              <p id="formStatus" class="hidden text-sm text-center"></p>
+              <p id="formStatus" class="hidden text-xs md:text-sm text-center"></p>
 
-              <p class="text-xs text-slate-400">
+              <p class="text-[10px] md:text-xs text-slate-400 leading-relaxed">
                 By submitting, you agree not to send sensitive personal data unless required for evaluation.
               </p>
             </form>
@@ -600,19 +600,19 @@
     </section>
 
     <footer class="border-t border-slate-800/70">
-      <div class="mx-auto max-w-6xl px-4 py-10">
-        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div class="text-sm text-slate-300">
+      <div class="mx-auto max-w-6xl px-5 py-8 md:px-4 md:py-10">
+        <div class="flex flex-col gap-4 md:gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="text-xs md:text-sm text-slate-300">
             © <span id="year"></span> PRISM DATA SYSTEMS LLC. All rights reserved.
           </div>
-          <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap gap-3 md:gap-4 text-[10px] md:text-xs text-slate-400">
             <a class="hover:text-slate-200" href="#security">Security</a>
             <a class="hover:text-slate-200" href="#pricing">Pricing</a>
             <a class="hover:text-slate-200" href="#faq">FAQ</a>
           </div>
         </div>
 
-        <div class="mt-6 text-xs text-slate-500">
+        <div class="mt-5 md:mt-6 text-[10px] md:text-xs text-slate-500 leading-relaxed">
           Disclaimer: This site is a template and does not constitute legal, financial, or security advice.
         </div>
       </div>
